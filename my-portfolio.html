@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/0ed3fe686b.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container"> 
+                <nav>
+                    <p class="name"><span>A</span>mores.</p>
+                    
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="row">
+                <div class="header-text">
+                    <!--<p>Software Developer</p>-->
+                    <h1>Hi, Im <span>Carl Lester</span><br>From Philippines </h1>
+                </div>
+                <div class="header-image">
+                    <img src="images/picture1.jpg">
+                </div>
+            </div>
+                </div>
+        </div>
+        <!--     about        -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/picture2.jpeg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p align="justify" class="about">
+                            I'm Carl lester Vergara Amores from Balayan Batangas. I recently completed
+                            my degree in Bachelor of Science in Computer Engineering from STI College 
+                            Balayan. During my academic journey I had the opportunity to experience 
+                            different hands-on activities and projects related to software engineering
+                            that provides my foundation in problem-solving, logical thinking, and different
+                            programming languages such as java, python, and C++.
+                        </p>
+                        <p align="justify">
+                            I aspire to become a software
+                            engineer/developer which focus on providing an innovative solutions through technology.
+                            During my final year in computer engineering I decided to study html, css, and javascript
+                            which give me a background on website development. Currently I seek an opportunity that will
+                            help my carreer growth and personal development while contributing my skills and knowledge
+                            in the field of technology.
+                        </p>
+                        <div class="tab-title">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><Span>Front-End</Span><br>
+                                    <br>HTML
+                                    <br>CSS
+                                    <br>Javascript</li>
+                                <li><Span>Back-End</Span><br>
+                                    <br>PHP
+                                    <br>Python
+                                    <br>Java
+                                    <br>C++
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><Span>No Working Experience</Span><br></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><Span>2019 - 2023</Span><br>Bachelor of Computer Engineering from STI College Balayan</li>
+                                <li><Span>2017 - 2019</Span><br>General Academic Strand from STI College Balayan</li>
+                                <li><Span>2013 - 2017</Span><br>Junior High School From Balayan National High School</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+
+           <!-----------------------porfilio------------------->
+           <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Projects</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/work-1.png">
+                        <div class="layer">
+                            <h3>Social Media App</h3>
+                            <p>The app connects you to the talented people 
+                                around the world. Download it from play store.</p>
+                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work-2.png">
+                        <div class="layer">
+                            <h3>Music App</h3>
+                            <p>The app connects you to the talented people 
+                                around the world. Download it from play store.</p>
+                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work-3.png">
+                        <div class="layer">
+                            <h3>Online Shopping App</h3>
+                            <p>The app connects you to the talented people 
+                                around the world. Download it from play store.</p>
+                                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+           </div>
+
+ <!--------------contact--------------->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p> <i class="fa-solid fa-paper-plane"></i> Lestervergaraamores@gmail.com</p>
+                        <p> <i class="fa-solid fa-square-phone"></i> +(63)997 - 427 - 0351</p>
+                        <div class="social-icons">
+                            <a href="http://www.facebook.com/kiyo.amores.9" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-x-twitter" ></i></a>
+                            <a href="http://www.linkedin.com/in/carl-lester-amores-70218b285" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/carllesteramores/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                        <a href="images/Resume-Lester.pdf" target="_blank" rel="noopener noreferrer" download class="btn btn2">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Thank you! <i class="fa-solid fa-heart"></i></p>
+            </div>
+        </div>
+
+        <script src="javascript.js"></script>
+    </body>
+</html>
