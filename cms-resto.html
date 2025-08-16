@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS Resto Project</title>
+    <link rel="stylesheet" href="csm-resto.css">
+
+</head>
+
+<body>
+    <div class="project-page">
+        <h1>CMS Restaurant</h1>
+        <p>
+            <strong>CMS Resto</strong> is a comprehensive restaurant management system that combines a
+            <em>public-facing website</em> with a powerful <em>operator dashboard</em>.
+            It enables restaurant administrators and branch operators to efficiently manage
+            <strong>menus</strong>, <strong>orders</strong>, and <strong>inventory</strong>,
+            while providing customers with a seamless experience to browse offerings and place orders online.
+            Designed as a <strong>full-stack solution</strong>, it streamlines both customer interaction
+            and back-office operations.
+        </p>
+
+        <h2>Features</h2>
+        <ul>
+            <li>
+                <strong>Public Website</strong>
+                <ul>
+                    <li>Browse menus with detailed categories</li>
+                    <li>Online ordering system for customers</li>
+                    <li>Responsive design for desktop and mobile users</li>
+                </ul>
+            </li>
+
+            <li>
+                <strong>Operator Dashboard</strong>
+                <ul>
+                    <li>Order tracking with real-time status updates</li>
+                    <li>POS (Point of Sale) system for dine-in and walk-in customers</li>
+                    <li>Kitchen view for monitoring and preparing incoming orders</li>
+                    <li>Branch analytics dashboard for sales and performance insights</li>
+                </ul>
+            </li>
+
+            <li>
+                <strong>Administrator Dashboard</strong>
+                <ul>
+                    <li>Centralized management of multiple branches</li>
+                    <li>Advanced analytics and reporting tools</li>
+                    <li>User and role management (Admin, Operators)</li>
+                    <li>Global control of promotions, content, and branding</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2 class="text-2xl font-bold mb-4">Images</h2>
+        <p class="mb-6 text-gray-700">
+            Below are sample screenshots of <strong>CMS Resto</strong>, showcasing the public website,
+            operator dashboard, kitchen view, POS system, and admin management pages.
+            For the complete source code and more details, visit the project repository on
+            <a href="https://github.com/Lester-Amores/CMSResto" target="_blank"
+                class="text-blue-600 hover:underline font-medium">
+                GitHub
+            </a>.
+        </p>
+
+        <div class="gallery grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <img src="../../images/cms-project/home-hero.png" alt="CMS Resto Home" class="rounded shadow">
+            <img src="../../images/cms-project/home-menu.png" alt="Menu Page" class="rounded shadow">
+            <img src="../../images/cms-project/home-branches.png" alt="Branches Page" class="rounded shadow">
+            <img src="../../images/cms-project/login-page.png" alt="Login Page" class="rounded shadow">
+            <img src="../../images/cms-project/admin-dashboard.png" alt="Admin Dashboard" class="rounded shadow">
+            <img src="../../images/cms-project/admin-branches.png" alt="Admin Branch Management" class="rounded shadow">
+            <img src="../../images/cms-project/admin-operator.png" alt="Admin Operator Management"
+                class="rounded shadow">
+            <img src="../../images/cms-project/operator-dashboard.png" alt="Operator Dashboard" class="rounded shadow">
+            <img src="../../images/cms-project/operator-kitchen.png" alt="Operator Kitchen View" class="rounded shadow">
+            <img src="../../images/cms-project/operator-POS.png" alt="Operator POS System" class="rounded shadow">
+        </div>
+
+
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <img src="" alt="Preview">
+    </div>
+
+    <script>
+        const galleryImages = document.querySelectorAll(".gallery img");
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = lightbox.querySelector("img");
+
+        galleryImages.forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.style.display = "flex";
+                lightboxImg.src = img.src;
+            });
+        });
+
+        lightbox.addEventListener("click", () => {
+            lightbox.style.display = "none";
+        });
+    </script>
+</body>
+
+</html>

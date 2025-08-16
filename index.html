@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/0ed3fe686b.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <div id="header">
-            <div class="container"> 
-                <nav>
-                    <p class="name"><span>A</span>mores.</p>
-                    
-                    <ul id="sidemenu">
-                        <li><a href="#header">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#portfolio">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                    </ul>
-                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-                </nav>
-                <div class="row">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <p class="name"><span>A</span>mores Carl Lester</p>
+
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="row">
                 <div class="header-text">
                     <!--<p>Software Developer</p>-->
                     <h1>Hi, Im <span>Carl Lester</span><br>From Philippines </h1>
@@ -32,149 +34,222 @@
                     <img src="images/picture1.jpg">
                 </div>
             </div>
-                </div>
         </div>
-        <!--     about        -->
-        <div id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="about-col-1">
-                        <img src="images/picture2.jpeg">
+    </div>
+    <!--     about        -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/picture2.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p align="justify" class="about">
+                        I am Carl Lester Vergara Amores from Balayan, Batangas. I hold a Bachelor of Science in Computer
+                        Engineering from STI College Balayan. As a web developer, I design, build, and maintain websites
+                        that
+                        focus on functionality, user experience, and accessibility. My work involves turning ideas into
+                        practical solutions while ensuring that projects are both visually appealing and efficient.
+                    </p>
+                    <p align="justify" class="about">
+                        I am passionate about software development and committed to providing innovative solutions
+                        through
+                        technology. My background in web development has allowed me to work on a variety of projects,
+                        from
+                        creating user-friendly websites to contributing to real-world applications. I am eager to
+                        continue
+                        growing in the field while applying my skills to deliver valuable results and support the
+                        success
+                        of the organization I work with.
+                    </p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="about-col-2">
-                        <h1 class="sub-title">About Me</h1>
-                        <p align="justify" class="about">
-                            I'm Carl lester Vergara Amores from Balayan Batangas. I recently completed
-                            my degree in Bachelor of Science in Computer Engineering from STI College 
-                            Balayan. During my academic journey I had the opportunity to experience 
-                            different hands-on activities and projects related to software engineering
-                            that provides my foundation in problem-solving, logical thinking, and different
-                            programming languages such as java, python, and C++.
-                        </p>
-                        <p align="justify">
-                            I aspire to become a software
-                            engineer/developer which focus on providing an innovative solutions through technology.
-                            During my final year in computer engineering I decided to study html, css, and javascript
-                            which give me a background on website development. Currently I seek an opportunity that will
-                            help my carreer growth and personal development while contributing my skills and knowledge
-                            in the field of technology.
-                        </p>
-                        <div class="tab-title">
-                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                            <p class="tab-links" onclick="opentab('education')">Education</p>
-                        </div>
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul>
-                                <li><Span>Front-End</Span><br>
-                                    <br>HTML
-                                    <br>CSS
-                                    <br>Javascript</li>
-                                <li><Span>Back-End</Span><br>
-                                    <br>PHP
-                                    <br>Python
-                                    <br>Java
-                                    <br>C++
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="experience">
-                            <ul>
-                                <li><Span>No Working Experience</Span><br></li>
-                                
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li><Span>2019 - 2023</Span><br>Bachelor of Computer Engineering from STI College Balayan</li>
-                                <li><Span>2017 - 2019</Span><br>General Academic Strand from STI College Balayan</li>
-                                <li><Span>2013 - 2017</Span><br>Junior High School From Balayan National High School</li>
-                            </ul>
-                        </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>
+                                <span>Programming Languages</span><br>
+                                PHP, JavaScript, HTML, CSS, Java, Python, C++
+                            </li>
+                            <li>
+                                <span>Frameworks & Libraries</span><br>
+                                Laravel, React, Tailwind, TypeScript, Node.js
+                            </li>
+                            <li>
+                                <span>Tools & Platforms</span><br>
+                                Git, GitHub, Docker, WordPress, Easy Panel, Postman, Insomnia,
+                                Google Analytics, Google Sheets, Slack, Figma
+                            </li>
+                            <li>
+                                <span>Database</span><br>
+                                MySQL, SQL, Firebase
+                            </li>
+                            <li>
+                                <span>Operating Systems</span><br>
+                                Linux, DOS, Windows
+                            </li>
+                            <li>
+                                <span>Networking</span><br>
+                                Troubleshooting, basic TCP/IP diagnostics, device connectivity
+                            </li>
+                            <li>
+                                <span>Others</span><br>
+                                Basic SEO principles, Spreadsheet automation (formulas/scripts),
+                                Image optimization, File system scripting
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>
+                                <span>Junior IT Engineer (Web Development) | June 2024 – Present</span><br>
+                                • Built and deployed full-stack web applications with Laravel, React, TypeScript,
+                                Tailwind, Docker, and MySQL, focusing on responsive design, SEO, and multilingual
+                                support.<br><br>
+                                • Managed servers, CI/CD pipelines, and testing workflows while also developing
+                                productivity tools (e.g., Slack app with ChatGPT, Python data scrapers, and automated
+                                Google Sheets/Excel integrations).
+                            </li>
+                            <li>
+                                <span>Freelance Web Developer | 2020 – Present</span><br>
+                                • Designed and developed websites for small businesses, school projects, and personal
+                                use.<br><br>
+                                • Assisted clients with website setup, customization, and basic maintenance.
+                            </li>
+                            <li>
+                                <span>Work Immersion Trainee | 300 hours</span><br>
+                                Completed 300-hour immersion focused on IoT, cloud computing, and Red Hat Enterprise
+                                Linux, including virtual machine setup, file management, permission handling, and
+                                network/DNS configuration.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><Span>2019 - 2023</Span><br>Bachelor of Computer Engineering from STI College Balayan
+                            </li>
+                            <li><Span>2017 - 2019</Span><br>General Academic Strand from STI College Balayan</li>
+                            <li><Span>2013 - 2017</Span><br>Junior High School From Balayan National High School</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-        </div> 
-
-
-           <!-----------------------porfilio------------------->
-           <div id="portfolio">
-            <div class="container">
-                <h1 class="sub-title">My Projects</h1>
-                <div class="work-list">
-                    <div class="work">
-                        <img src="images/Phaven.png">
-                        <div class="layer">
-                            <h3>Phaven(Travel Website)</h3>
-                            <p>A website where you can post the amazing destination that you been through. 
-                                This involves a simple CRUD operations using php and mySQL.</p>
-                                <a href="https://github.com/Lester-Amores/Phaven.git" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <img src="images/youtube.png">
-                        <div class="layer">
-                            <h3>Youtube clone</h3>
-                            <p>This project is a clone of youtube using vanilla html and css</p>
-                                <a href="https://lester-amores.github.io/Youtube-clone/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <img src="images/SliderPicture.png">
-                        <div class="layer">
-                            <h3>Full Page Website Slider</h3>
-                            <p>
-                                The Webpage allow you to see different season
-                                with their unique beauty.
-                            </p>
-                                <a href="https://lester-amores.github.io/Slider/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <img src="images/laragigs.png">
-                        <div class="layer">
-                            <h3>Job Posting</h3>
-                            <p>Website where you can post job posting with description.</p>
-                                <a href="https://github.com/Lester-Amores/my-first-app" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-           </div>
-
- <!--------------contact--------------->
-        <div id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="contact-left">
-                        <h1 class="sub-title">Contact Me</h1>
-                        <p> <i class="fa-solid fa-paper-plane"></i> Lestervergaraamores@gmail.com</p>
-                        <p> <i class="fa-solid fa-square-phone"></i> +(63)997 - 427 - 0351</p>
-                        <div class="social-icons">
-                            <a href="http://www.facebook.com/kiyo.amores.9" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="#"><i class="fa-brands fa-x-twitter" ></i></a>
-                            <a href="http://www.linkedin.com/in/carl-lester-amores-70218b285" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://www.instagram.com/carllesteramores/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
-                        <a href="images/Resume-Lester.pdf" target="_blank" rel="noopener noreferrer" download class="btn btn2">Download CV</a>
-                    </div>
-                    <div class="contact-right">
-                        <form name="submit-to-google-sheet">
-                            <input type="text" name="Name" placeholder="Your name" required>
-                            <input type="email" name="Email" placeholder="Your Email" required>
-                            <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
-                            <button type="submit" class="btn btn2">Submit</button>
-                        </form>
-                        <span id="msg"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>Thank you! <i class="fa-solid fa-heart"></i></p>
             </div>
         </div>
+    </div>
 
-        <script src="javascript.js"></script>
-    </body>
+
+    <!-----------------------porfilio------------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/cms-project/home-hero.png" alt="CMS Restaurant Project Preview">
+                    <div class="layer">
+                        <h3>CMS Restaurant</h3>
+                        <p>
+                            A full-stack restaurant management system with multiple user roles:
+                            <strong>Admin</strong> (system control and reporting),
+                            <strong>Branch Operator</strong> (daily operations and inventory),
+                            and a <strong>Public Page</strong> for customers.
+                            Key features include order management, inventory tracking, and integrated CMS for content
+                            updates.
+                        </p>
+                        <a href="/cms-resto.html" target="_blank">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/autolane.png">
+                    <div class="layer">
+                        <h3>Auto Lane Cars</h3>
+                        <p>A frontend website built with React and Tailwind CSS that showcases different car types and
+                            models.
+                            This project focuses on UI/UX and responsive design.</p>
+                        <a href="https://lester-amores.github.io/AutoLaneCars" target="_blank">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/Phaven.png">
+                    <div class="layer">
+                        <h3>Phaven(Travel Website)</h3>
+                        <p>A website where you can post the amazing destination that you been through.
+                            This involves a simple CRUD operations using php and mySQL.</p>
+                        <a href="https://github.com/Lester-Amores/Phaven.git" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/SliderPicture.png">
+                    <div class="layer">
+                        <h3>Full Page Website Slider</h3>
+                        <p>
+                            The Webpage allow you to see different season
+                            with their unique beauty.
+                        </p>
+                        <a href="https://lester-amores.github.io/Slider/" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/laragigs.png">
+                    <div class="layer">
+                        <h3>Job Posting</h3>
+                        <p>Website where you can post job posting with description.</p>
+                        <a href="https://github.com/Lester-Amores/my-first-app" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--------------contact--------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p> <i class="fa-solid fa-paper-plane"></i> Lestervergaraamores@gmail.com</p>
+                    <p> <i class="fa-solid fa-square-phone"></i> +(63)997 - 427 - 0351</p>
+                    <div class="social-icons">
+                        <a href="http://www.facebook.com/kiyo.amores.9" target="_blank" rel="noopener noreferrer"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="http://www.linkedin.com/in/carl-lester-amores-70218b285" target="_blank"
+                            rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/carllesteramores/" target="_blank"
+                            rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <a href="resume/Resume-Amores.pdf" target="_blank" rel="noopener noreferrer" download
+                        class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Thank you! <i class="fa-solid fa-heart"></i></p>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+
 </html>
