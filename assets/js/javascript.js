@@ -1,6 +1,25 @@
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxtrYxTgs8L5E-pDyyMCazrv749k7HVbTzY3QmSMY5MXDzrxrYv1lO0Xao6t9n64M5C/exec'
-const form = document.forms['submit-to-google-sheet']
-const msg = document.getElementById("msg")
+
+// Initialize form handling after includes are loaded
+function initializeFormHandling() {
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById("msg");
+    
+    if (form && msg) {
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML= "Message sent succesfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message))
+        });
+    }
+}
             
             
 // Legacy tab system for backwards compatibility
@@ -18,8 +37,11 @@ function opentab(tabname){
     document.getElementById(tabname).classList.add("active-tab");
 }
 
-// Modern tab system
-document.addEventListener('DOMContentLoaded', function() {
+// Initialize all tab systems and form handling
+window.initializeAllFeatures = function() {
+    console.log('Initializing all features...');
+    
+    // Modern tab system
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-contents');
     
@@ -44,9 +66,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const portfolioTabButtons = document.querySelectorAll('.portfolio-tab-button');
     const portfolioTabContents = document.querySelectorAll('.portfolio-tab-contents');
     
+    console.log('Found portfolio tab buttons:', portfolioTabButtons.length);
+    console.log('Found portfolio tab contents:', portfolioTabContents.length);
+    
     portfolioTabButtons.forEach(button => {
         button.addEventListener('click', function() {
             const targetTab = this.getAttribute('data-portfolio-tab');
+            console.log('Portfolio tab clicked:', targetTab);
             
             // Remove active class from all buttons and contents
             portfolioTabButtons.forEach(btn => btn.classList.remove('active-portfolio-tab'));
@@ -57,9 +83,21 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetContent = document.getElementById(targetTab + '-projects');
             if (targetContent) {
                 targetContent.classList.add('active-portfolio-tab');
+                console.log('Activated tab:', targetTab + '-projects');
+            } else {
+                console.log('Target content not found:', targetTab + '-projects');
             }
         });
     });
+    
+    // Initialize form handling
+    initializeFormHandling();
+};
+
+// Wait for includes to be loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // The initialization will be called after includes are loaded in index.html
+    console.log('DOM loaded, waiting for includes...');
 });
 
 var sidemenu = document.getElementById("sidemenu");
@@ -102,15 +140,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-form.addEventListener('submit', e => {
-e.preventDefault()
-fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-.then(response => {
-    msg.innerHTML= "Message sent succesfully"
-    setTimeout(function(){
-        msg.innerHTML = ""
-    }, 5000)
-    form.reset();
-})
-.catch(error => console.error('Error!', error.message))
-})

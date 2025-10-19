@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://kit.fontawesome.com/0ed3fe686b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <!-- Header Section -->
     <div id="header">
         <div class="hero-background"></div>
         <div class="container">
@@ -23,10 +24,13 @@
                 <ul class="nav-menu" id="sidemenu">
                     <li class="nav-item"><a href="#header" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                    <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
                     <li class="nav-item"><a href="#portfolio" class="nav-link">Projects</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                     <li class="nav-close">
-                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                     </li>
                 </ul>
                 
@@ -57,208 +61,85 @@
                 </div>
                 <div class="hero-image">
                     <div class="image-wrapper">
-                        <img src="images/picture1.jpg" alt="Carl Lester">
+                        <img src="assets/images/picture1.jpg" alt="Carl Lester">
                         <div class="image-overlay"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--     about        -->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/picture2.jpeg">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p align="justify" class="about">
-                        I am Carl Lester Vergara Amores from Balayan, Batangas. I hold a Bachelor of Science in Computer
-                        Engineering from STI College Balayan. As a web developer, I design, build, and maintain websites
-                        that
-                        focus on functionality, user experience, and accessibility. My work involves turning ideas into
-                        practical solutions while ensuring that projects are both visually appealing and efficient.
-                    </p>
-                    <p align="justify" class="about">
-                        I am passionate about software development and committed to providing innovative solutions
-                        through
-                        technology. My background in web development has allowed me to work on a variety of projects,
-                        from
-                        creating user-friendly websites to contributing to real-world applications. I am eager to
-                        continue
-                        growing in the field while applying my skills to deliver valuable results and support the
-                        success
-                        of the organization I work with.
-                    </p>
-                    <div class="tab-title">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li>
-                                <span>Programming Languages</span><br>
-                                PHP, JavaScript, HTML, CSS, Java, Python, C++
-                            </li>
-                            <li>
-                                <span>Frameworks & Libraries</span><br>
-                                Laravel, React, Tailwind, TypeScript, Node.js
-                            </li>
-                            <li>
-                                <span>Tools & Platforms</span><br>
-                                Git, GitHub, Docker, WordPress, Easy Panel, Postman, Insomnia,
-                                Google Analytics, Google Sheets, Slack, Figma
-                            </li>
-                            <li>
-                                <span>Database</span><br>
-                                MySQL, SQL, Firebase
-                            </li>
-                            <li>
-                                <span>Operating Systems</span><br>
-                                Linux, DOS, Windows
-                            </li>
-                            <li>
-                                <span>Networking</span><br>
-                                Troubleshooting, basic TCP/IP diagnostics, device connectivity
-                            </li>
-                            <li>
-                                <span>Others</span><br>
-                                Basic SEO principles, Spreadsheet automation (formulas/scripts),
-                                Image optimization, File system scripting
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li>
-                                <span>Junior IT Engineer (Web Development) | June 2024 – Present</span><br>
-                                • Built and deployed full-stack web applications with Laravel, React, TypeScript,
-                                Tailwind, Docker, and MySQL, focusing on responsive design, SEO, and multilingual
-                                support.<br><br>
-                                • Managed servers, CI/CD pipelines, and testing workflows while also developing
-                                productivity tools (e.g., Slack app with ChatGPT, Python data scrapers, and automated
-                                Google Sheets/Excel integrations).
-                            </li>
-                            <li>
-                                <span>Freelance Web Developer | 2020 – Present</span><br>
-                                • Designed and developed websites for small businesses, school projects, and personal
-                                use.<br><br>
-                                • Assisted clients with website setup, customization, and basic maintenance.
-                            </li>
-                            <li>
-                                <span>Work Immersion Trainee | 300 hours</span><br>
-                                Completed 300-hour immersion focused on IoT, cloud computing, and Red Hat Enterprise
-                                Linux, including virtual machine setup, file management, permission handling, and
-                                network/DNS configuration.
-                            </li>
-                        </ul>
-                    </div>
 
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><Span>2019 - 2023</Span><br>Bachelor of Computer Engineering from STI College Balayan
-                            </li>
-                            <li><Span>2017 - 2019</Span><br>General Academic Strand from STI College Balayan</li>
-                            <li><Span>2013 - 2017</Span><br>Junior High School From Balayan National High School</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Include About Section -->
+    <div w3-include-html="sections/about.html"></div>
+    
+    <!-- Include Skills Section -->
+    <div w3-include-html="sections/skills.html"></div>
+    
+    <!-- Include Experience Section -->
+    <div w3-include-html="sections/experience.html"></div>
+    
+    <!-- Include Education Section -->
+    <div w3-include-html="sections/education.html"></div>
+    
+    <!-- Include Portfolio Section -->
+    <div w3-include-html="sections/portfolio.html"></div>
+    
+    <!-- Include Contact Section -->
+    <div w3-include-html="sections/contact.html"></div>
 
-
-    <!-----------------------porfilio------------------->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Projects</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="images/cms-project/home-hero.png" alt="CMS Restaurant Project Preview">
-                    <div class="layer">
-                        <h3>CMS Restaurant</h3>
-                        <p>
-                            A full-stack restaurant management system with multiple user roles:
-                            <strong>Admin</strong> (system control and reporting),
-                            <strong>Branch Operator</strong> (daily operations and inventory),
-                            and a <strong>Public Page</strong> for customers.
-                            Key features include order management, inventory tracking, and integrated CMS for content
-                            updates.
-                        </p>
-                        <a href="cms-resto.html" target="_blank">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/autolane.png">
-                    <div class="layer">
-                        <h3>Auto Lane Cars</h3>
-                        <p>A frontend website built with React and Tailwind CSS that showcases different car types and
-                            models.
-                            This project focuses on UI/UX and responsive design.</p>
-                        <a href="https://lester-amores.github.io/AutoLaneCars" target="_blank">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="work">
-                    <img src="images/SliderPicture.png">
-                    <div class="layer">
-                        <h3>Full Page Website Slider</h3>
-                        <p>
-                            The Webpage allow you to see different season
-                            with their unique beauty.
-                        </p>
-                        <a href="https://lester-amores.github.io/Slider/" target="_blank"><i
-                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!--------------contact--------------->
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p> <i class="fa-solid fa-paper-plane"></i> Lestervergaraamores@gmail.com</p>
-                    <p> <i class="fa-solid fa-square-phone"></i> +(63)997 - 427 - 0351</p>
-                    <div class="social-icons">
-                        <a href="http://www.facebook.com/kiyo.amores.9" target="_blank" rel="noopener noreferrer"><i
-                                class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="http://www.linkedin.com/in/carl-lester-amores-70218b285" target="_blank"
-                            rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/carllesteramores/" target="_blank"
-                            rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                    <a href="resume/Resume-Amores.pdf" target="_blank" rel="noopener noreferrer" download
-                        class="btn btn2">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>Thank you! <i class="fa-solid fa-heart"></i></p>
-        </div>
-    </div>
-
-    <script src="javascript.js"></script>
+    <script src="assets/js/javascript.js"></script>
+    <script>
+        // Include HTML function for modular structure
+        let includesLoaded = 0;
+        let totalIncludes = 0;
+        
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            var includes = document.querySelectorAll('[w3-include-html]');
+            
+            if (totalIncludes === 0) {
+                totalIncludes = includes.length;
+            }
+            
+            if (includes.length === 0 && includesLoaded > 0) {
+                // All includes have been processed
+                if (typeof initializeAllFeatures === 'function') {
+                    setTimeout(initializeAllFeatures, 50);
+                }
+                return;
+            }
+            
+            /*loop through a collection of all HTML elements:*/
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /*make an HTTP request using the attribute value as the file name:*/
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {
+                                elmnt.innerHTML = this.responseText;
+                                includesLoaded++;
+                            }
+                            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                            /*remove the attribute, and call this function once more:*/
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    return;
+                }
+            }
+        }
+        
+        // Initialize includes when page loads
+        includeHTML();
+    </script>
 </body>
 
 </html>
