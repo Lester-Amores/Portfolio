@@ -20,12 +20,40 @@ function opentab(tabname){
 var sidemenu = document.getElementById("sidemenu");
 
 function openmenu(){
-    sidemenu.style.right= "0";
+    sidemenu.classList.add("active");
+    sidemenu.style.right = "0";
 }
 
 function closemenu(){
-    sidemenu.style.right= "-200px";
+    sidemenu.classList.remove("active");
+    sidemenu.style.right = "-300px";
 }
+
+// Close menu when clicking on nav links (mobile)
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sidemenu = document.getElementById("sidemenu");
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                closemenu();
+            }
+        });
+    });
+    
+    // Close menu when clicking outside (mobile)
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            const nav = document.querySelector('.modern-nav');
+            const menu = document.getElementById('sidemenu');
+            
+            if (!nav.contains(e.target) && menu.classList.contains('active')) {
+                closemenu();
+            }
+        }
+    });
+});
 
 
 
